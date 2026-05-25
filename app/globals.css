@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --lambo-gold: #FFD700;
+  --lambo-orange: #FF8C00;
+  --lambo-red: #CC0000;
+  --lambo-dark: #0a0500;
+}
+
+/* Rotating animation for 360 view */
+/* @keyframes spin-slow {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+} */
+
+/* Text slide-in with scale animation */
+@keyframes slideInScale {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Fade-in and slide up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+    perspective: 1000px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Rajdhani', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #FF8C00; border-radius: 2px; }
+
+/* Section transitions */
+.section-content {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1);
+}
+.section-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glow effects */
+.glow-gold { text-shadow: 0 0 30px rgba(255,215,0,0.6), 0 0 60px rgba(255,165,0,0.3); }
+.glow-red  { text-shadow: 0 0 30px rgba(204,0,0,0.6), 0 0 60px rgba(255,0,0,0.3); }
+.glow-blue { text-shadow: 0 0 30px rgba(0,102,255,0.6), 0 0 60px rgba(0,68,204,0.3); }
+.glow-green{ text-shadow: 0 0 30px rgba(0,221,136,0.6), 0 0 60px rgba(0,170,100,0.3); }
+
+/* Background gradient overlays per section */
+.bg-hero       { background: radial-gradient(ellipse at 50% 100%, rgba(26,8,0,0.8) 0%, rgba(0,0,0,0.95) 70%); }
+.bg-perf       { background: radial-gradient(ellipse at 0% 50%, rgba(40,0,0,0.85) 0%, rgba(0,0,0,0.95) 70%); }
+.bg-models     { background: radial-gradient(ellipse at 50% 0%, rgba(0,5,30,0.85) 0%, rgba(0,0,0,0.95) 70%); }
+.bg-tech       { background: radial-gradient(ellipse at 100% 50%, rgba(0,20,10,0.85) 0%, rgba(0,0,0,0.95) 70%); }
+.bg-heritage   { background: radial-gradient(ellipse at 50% 50%, rgba(10,10,10,0.85) 0%, rgba(0,0,0,0.95) 70%); }
+.bg-footer     { background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.98) 30%); }
+
+/* Stat counter animation */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Shimmer effect on lines */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.shimmer-line {
+  background: linear-gradient(90deg, transparent 0%, var(--lambo-gold) 50%, transparent 100%);
+  background-size: 200% auto;
+  animation: shimmer 2s linear infinite;
+}
+
+/* Speed lines (performance section) */
+@keyframes speedLine {
+  from { transform: translateX(100vw); opacity: 0.8; }
+  to   { transform: translateX(-100vw); opacity: 0; }
+}
+.speed-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #FF4400, transparent);
+  animation: speedLine 0.6s linear infinite;
+}
+
+/* Circuit pulse (tech section) */
+@keyframes circuitPulse {
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 1; }
+}
+
+/* Fade in up */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Gradient text */
+.gradient-gold {
+  background: linear-gradient(135deg, #fff 30%, #FFD700 65%, #FF8C00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-red {
+  background: linear-gradient(135deg, #fff 20%, #FF4400 60%, #CC0000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-blue {
+  background: linear-gradient(135deg, #fff 20%, #44AAFF 60%, #0055FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-green {
+  background: linear-gradient(135deg, #fff 20%, #00FF88 60%, #00CC66 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-silver {
+  background: linear-gradient(135deg, #fff 30%, #CCCCCC 60%, #888888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Border glow */
+.border-glow-gold  { box-shadow: 0 0 20px rgba(255,215,0,0.3), inset 0 0 20px rgba(255,165,0,0.05); }
+.border-glow-red   { box-shadow: 0 0 20px rgba(204,0,0,0.3), inset 0 0 20px rgba(255,0,0,0.05); }
+.border-glow-blue  { box-shadow: 0 0 20px rgba(0,102,255,0.3), inset 0 0 20px rgba(0,68,204,0.05); }
+.border-glow-green { box-shadow: 0 0 20px rgba(0,221,136,0.3), inset 0 0 20px rgba(0,170,100,0.05); }
+
+/* Noise texture overlay */
+.noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.04;
+}
+
+/* Sci-fi HUD overlay styles */
+.bg-radial-vignette {
+  background: radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.8) 100%);
+}
+.bg-scanlines {
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%),
+              linear-gradient(90deg, rgba(0, 255, 136, 0.05), rgba(0, 255, 136, 0.02), rgba(0, 255, 136, 0.05));
+  background-size: 100% 4px, 6px 100%;
+}
+
