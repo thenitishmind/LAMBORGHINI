@@ -32,6 +32,34 @@
   }
 }
 
+/* Word-by-word dramatic reveal for BORN TO DRIFT */
+@keyframes wordBlast {
+  0%   { opacity: 0; transform: translateY(120px) skewY(8deg) scale(0.6); filter: blur(20px); }
+  60%  { opacity: 1; transform: translateY(-10px) skewY(-2deg) scale(1.08); filter: blur(0px); }
+  80%  { transform: translateY(5px) skewY(1deg) scale(0.97); }
+  100% { opacity: 1; transform: translateY(0) skewY(0deg) scale(1); filter: blur(0px); }
+}
+
+@keyframes lineGrow {
+  from { width: 0; opacity: 0; }
+  to   { width: 100%; opacity: 1; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 40px currentColor, 0 0 80px currentColor; }
+  50%       { text-shadow: 0 0 80px currentColor, 0 0 160px currentColor, 0 0 200px currentColor; }
+}
+
+@keyframes driftTagline {
+  0%   { opacity: 0; letter-spacing: 20px; transform: translateX(-30px); }
+  100% { opacity: 1; letter-spacing: 6px; transform: translateX(0); }
+}
+
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 /* Fade-in and slide up animation */
 @keyframes fadeInUp {
   from {
