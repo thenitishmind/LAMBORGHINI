@@ -194,22 +194,7 @@ export default function View360Section() {
           </div>
         </div>
 
-        {/* Features list */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-12 border-t border-white/10">
-          {[
-            { icon: '🔄', label: 'Full Rotation' },
-            { icon: '⚡', label: 'Real-time' },
-            { icon: '🎯', label: 'HD Quality' },
-            { icon: '📱', label: 'All Devices' },
-          ].map((feature, i) => (
-            <div key={i} className="text-center">
-              <div className="text-3xl mb-2">{feature.icon}</div>
-              <div className="font-orbitron text-xs tracking-wider uppercase text-white/70">
-                {feature.label}
-              </div>
-            </div>
-          ))}
-        </div>
+
       </div>
     </section>
   )

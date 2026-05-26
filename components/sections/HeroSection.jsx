@@ -5,18 +5,41 @@ import { useEffect, useRef, useState } from 'react'
 const ROTATION_VIDEOS = [
   { src: '/cars/360view.mp4', label: 'Exterior View' },
   { src: '/cars/360.mp4', label: 'Performance View' },
+  { src: '/cars/wow.mp4', label: 'Drift' },
 ]
 
-const ANIMATED_WORDS = ['BORN', 'TO', 'DEFY']
+const ANIMATED_WORDS = ['BORN', 'TO', 'DRIFT']
 
 export default function HeroSection({ accent, active }) {
   const videoRef = useRef(null)
-  const [currentVideo, setCurrentVideo] = useState(0)
+  const audioRef = useRef(null)
+  const [currentVideo, setCurrentVideo] = useState(2)
+  const [isPlaying, setIsPlaying] = useState(false)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
+    // Auto-play music when Drift video loads
+    if (audioRef.current) {
+      audioRef.current.play().catch(() => {
+        // Playback might be blocked by browser autoplay policy
+      })
+      setIsPlaying(true)
+    }
   }, [])
+
+  const toggleMusic = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause()
+        setCurrentVideo(0)
+      } else {
+        audioRef.current.play()
+        setCurrentVideo(2)
+      }
+      setIsPlaying(!isPlaying)
+    }
+  }
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pointer-events-none select-none overflow-hidden">
@@ -127,7 +150,24 @@ export default function HeroSection({ accent, active }) {
                 {ROTATION_VIDEOS.map((video, idx) => (
                   <button
                     key={idx}
-                    onClick={() => setCurrentVideo(idx)}
+                    onClick={() => {
+                      setCurrentVideo(idx)
+                      if (idx === 2) {
+                        // Drift button - restart music from beginning
+                        if (audioRef.current) {
+                          audioRef.current.currentTime = 0
+                          audioRef.current.play()
+                          setIsPlaying(true)
+                        }
+                      } else {
+                        // Other buttons - stop music
+                        if (audioRef.current && isPlaying) {
+                          audioRef.current.pause()
+                          audioRef.current.currentTime = 0
+                          setIsPlaying(false)
+                        }
+                      }
+                    }}
                     className={`px-3 sm:px-6 py-2 sm:py-3 rounded-md font-orbitron text-[10px] sm:text-xs font-bold transition-all duration-300 border-2 backdrop-blur ${
                       currentVideo === idx
                         ? 'scale-105 shadow-lg'
@@ -139,7 +179,7 @@ export default function HeroSection({ accent, active }) {
                       color: accent,
                     }}
                   >
-                    {video.label}
+                    {idx === 2 ? `🎵 ${video.label}` : video.label}
                   </button>
                 ))}
               </div>
@@ -167,6 +207,13 @@ export default function HeroSection({ accent, active }) {
           </div>
         </>
       )}
+
+      {/* Audio element for drift music */}
+      <audio
+        ref={audioRef}
+        src="/cars/Music.mp3"
+        loop
+      />
 
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />

@@ -119,7 +119,7 @@ export default function FooterSection({ active }) {
                 Automobili Lamborghini S.p.A.<br />
                 Via Modena 12, Sant'Agata Bolognese, Italy.
                 <br /><br />
-                Born to defy. Built to dominate.
+                Born to drift. Built to dominate.
               </p>
             </div>
 

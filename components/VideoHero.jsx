@@ -19,10 +19,13 @@ export default function VideoHero() {
         ref={videoRef}
         className="w-full h-full object-cover"
         autoPlay
-        muted
+        mute
+        
+        d
         loop
         playsInline
       >
+        <source src="/cars/wow.mp4" type="video/mp4" />
         <source src="/cars/car2.mp4" type="video/mp4" />
         <source src="/cars/Cars1.mp4" type="video/mp4" />
       </video>

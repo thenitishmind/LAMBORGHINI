@@ -14,7 +14,7 @@ import FooterSection from '@/components/sections/FooterSection'
 import VideoShowcase from '@/components/VideoShowcase'
 
 const SECTION_THEMES = [
-  { accent: '#FFD700', label: '01 / BORN TO DEFY',    bg: 'bg-hero'    },
+  { accent: '#FFD700', label: '01 / BORN TO DRIFT',    bg: 'bg-hero'    },
   { accent: '#00D9FF', label: '02 / PERFORMANCE DNA',  bg: 'bg-perf'    },
   { accent: '#FF006E', label: '03 / THE LINEUP',       bg: 'bg-models'  },
   { accent: '#B537F2', label: '04 / INNOVATION',       bg: 'bg-tech'    },
@@ -37,7 +37,6 @@ export default function Home() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
-
   const theme = SECTION_THEMES[activeSection]
 
   return (

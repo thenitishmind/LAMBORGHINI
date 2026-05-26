@@ -31,13 +31,14 @@ export default function Navbar({ activeSection, theme }) {
       {/* Logo */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="font-orbitron font-black text-xl tracking-[4px] transition-all duration-500"
+        className="font-orbitron font-black text-xl tracking-[4px] transition-all duration-500 flex items-center gap-3"
         style={{
           background: `linear-gradient(90deg, ${theme.accent}, #fff)`,
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
         }}
       >
+        <img src="/logo.png" alt="Lamborghini" className="w-8 h-8 object-contain" />
         LAMBORGHINI
       </button>
 
