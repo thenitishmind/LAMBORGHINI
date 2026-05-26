@@ -151,7 +151,7 @@ Nitish Mind
 ## 🔗 Links
 
 - **GitHub**: https://github.com/thenitishmind/LAMBORGHINI
-- **Live Demo**: [Add your deployment URL here]
+- **Live Demo**: https://lamborghini-jade.vercel.app/
 
 ## 🤝 Contributing
 
@@ -163,4 +163,4 @@ For issues and suggestions, please open an issue on GitHub.
 
 ---
 
-**Made with ❤️ by Nitish Mind**
+**Made with ❤️ by Nitish **
