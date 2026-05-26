@@ -13,10 +13,10 @@ module.exports = {
       },
       colors: {
         lambo: {
-          gold: '#39FF14',
-          orange: '#AAFF00',
-          red: '#00FF88',
-          dark: '#000A00',
+          gold: '#FEA700',
+          orange: '#DD3D0D',
+          red: '#C10001',
+          dark: '#0D1015',
         },
       },
     },

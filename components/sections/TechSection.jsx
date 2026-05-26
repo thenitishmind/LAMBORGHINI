@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 
-const ACCENT = '#39FF14'
+const ACCENT = '#FEA700'
 
 const FEATURES = [
   {

@@ -4,10 +4,10 @@
 @tailwind utilities;
 
 :root {
-  --lambo-gold: #39FF14;
-  --lambo-orange: #AAFF00;
-  --lambo-red: #00FF88;
-  --lambo-dark: #000A00;
+  --lambo-gold: #FEA700;
+  --lambo-orange: #DD3D0D;
+  --lambo-red: #C10001;
+  --lambo-dark: #0D1015;
 }
 
 /* Rotating animation for 360 view */
@@ -62,7 +62,7 @@ html {
 }
 
 body {
-  background: #000;
+  background: #0D1015;
   color: #fff;
   font-family: 'Rajdhani', sans-serif;
   overflow-x: hidden;
@@ -70,8 +70,8 @@ body {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #000; }
-::-webkit-scrollbar-thumb { background: #39FF14; border-radius: 2px; }
+::-webkit-scrollbar-track { background: #0D1015; }
+::-webkit-scrollbar-thumb { background: #FEA700; border-radius: 2px; }
 
 /* Section transitions */
 .section-content {
@@ -85,18 +85,18 @@ body {
 }
 
 /* Glow effects */
-.glow-gold { text-shadow: 0 0 30px rgba(57,255,20,0.6), 0 0 60px rgba(170,255,0,0.3); }
-.glow-red  { text-shadow: 0 0 30px rgba(0,255,136,0.6), 0 0 60px rgba(0,200,100,0.3); }
+.glow-gold { text-shadow: 0 0 30px rgba(254,167,0,0.6), 0 0 60px rgba(221,61,13,0.3); }
+.glow-red  { text-shadow: 0 0 30px rgba(193,0,1,0.6), 0 0 60px rgba(193,0,1,0.3); }
 .glow-blue { text-shadow: 0 0 30px rgba(0,102,255,0.6), 0 0 60px rgba(0,68,204,0.3); }
-.glow-green{ text-shadow: 0 0 30px rgba(57,255,20,0.6), 0 0 60px rgba(170,255,0,0.3); }
+.glow-green{ text-shadow: 0 0 30px rgba(221,61,13,0.6), 0 0 60px rgba(254,167,0,0.3); }
 
 /* Background gradient overlays per section */
-.bg-hero       { background: radial-gradient(ellipse at 50% 100%, rgba(0,20,0,0.8) 0%, rgba(0,0,0,0.95) 70%); }
-.bg-perf       { background: radial-gradient(ellipse at 0% 50%, rgba(0,30,0,0.85) 0%, rgba(0,0,0,0.95) 70%); }
-.bg-models     { background: radial-gradient(ellipse at 50% 0%, rgba(0,20,0,0.85) 0%, rgba(0,0,0,0.95) 70%); }
-.bg-tech       { background: radial-gradient(ellipse at 100% 50%, rgba(0,25,5,0.85) 0%, rgba(0,0,0,0.95) 70%); }
-.bg-heritage   { background: radial-gradient(ellipse at 50% 50%, rgba(5,15,5,0.85) 0%, rgba(0,0,0,0.95) 70%); }
-.bg-footer     { background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.98) 30%); }
+.bg-hero       { background: radial-gradient(ellipse at 50% 100%, rgba(193,0,1,0.12) 0%, rgba(13,16,21,0.95) 70%); }
+.bg-perf       { background: radial-gradient(ellipse at 0% 50%, rgba(254,167,0,0.1) 0%, rgba(13,16,21,0.95) 70%); }
+.bg-models     { background: radial-gradient(ellipse at 50% 0%, rgba(221,61,13,0.1) 0%, rgba(13,16,21,0.95) 70%); }
+.bg-tech       { background: radial-gradient(ellipse at 100% 50%, rgba(193,0,1,0.1) 0%, rgba(13,16,21,0.95) 70%); }
+.bg-heritage   { background: radial-gradient(ellipse at 50% 50%, rgba(254,167,0,0.08) 0%, rgba(13,16,21,0.95) 70%); }
+.bg-footer     { background: linear-gradient(180deg, rgba(13,16,21,0) 0%, rgba(13,16,21,0.98) 30%); }
 
 /* Stat counter animation */
 @keyframes countUp {
@@ -123,7 +123,7 @@ body {
 .speed-line {
   position: absolute;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #39FF14, transparent);
+  background: linear-gradient(90deg, transparent, #FEA700, transparent);
   animation: speedLine 0.6s linear infinite;
 }
 
@@ -141,25 +141,25 @@ body {
 
 /* Gradient text */
 .gradient-gold {
-  background: linear-gradient(135deg, #fff 30%, #39FF14 65%, #AAFF00 100%);
+  background: linear-gradient(135deg, #fff 30%, #FEA700 65%, #DD3D0D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .gradient-red {
-  background: linear-gradient(135deg, #fff 20%, #00FF88 60%, #39FF14 100%);
+  background: linear-gradient(135deg, #fff 20%, #C10001 60%, #FEA700 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .gradient-blue {
-  background: linear-gradient(135deg, #fff 20%, #AAFF00 60%, #39FF14 100%);
+  background: linear-gradient(135deg, #fff 20%, #DD3D0D 60%, #FEA700 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .gradient-green {
-  background: linear-gradient(135deg, #fff 20%, #39FF14 60%, #AAFF00 100%);
+  background: linear-gradient(135deg, #fff 20%, #FEA700 60%, #DD3D0D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -172,10 +172,10 @@ body {
 }
 
 /* Border glow */
-.border-glow-gold  { box-shadow: 0 0 20px rgba(57,255,20,0.3), inset 0 0 20px rgba(170,255,0,0.05); }
-.border-glow-red   { box-shadow: 0 0 20px rgba(0,255,136,0.3), inset 0 0 20px rgba(0,200,100,0.05); }
+.border-glow-gold  { box-shadow: 0 0 20px rgba(254,167,0,0.3), inset 0 0 20px rgba(221,61,13,0.05); }
+.border-glow-red   { box-shadow: 0 0 20px rgba(193,0,1,0.3), inset 0 0 20px rgba(193,0,1,0.05); }
 .border-glow-blue  { box-shadow: 0 0 20px rgba(0,102,255,0.3), inset 0 0 20px rgba(0,68,204,0.05); }
-.border-glow-green { box-shadow: 0 0 20px rgba(57,255,20,0.3), inset 0 0 20px rgba(170,255,0,0.05); }
+.border-glow-green { box-shadow: 0 0 20px rgba(221,61,13,0.3), inset 0 0 20px rgba(254,167,0,0.05); }
 
 /* Noise texture overlay */
 .noise::after {
@@ -193,7 +193,6 @@ body {
 }
 .bg-scanlines {
   background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%),
-              linear-gradient(90deg, rgba(0, 255, 136, 0.05), rgba(0, 255, 136, 0.02), rgba(0, 255, 136, 0.05));
+              linear-gradient(90deg, rgba(193, 0, 1, 0.05), rgba(193, 0, 1, 0.02), rgba(193, 0, 1, 0.05));
   background-size: 100% 4px, 6px 100%;
 }
-

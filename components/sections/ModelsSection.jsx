@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 
-const ACCENT = '#AAFF00'
+const ACCENT = '#DD3D0D'
 
 const MODELS = [
   {
@@ -10,7 +10,7 @@ const MODELS = [
     year: '2023 – PRESENT',
     tag: 'V12 Hybrid',
     icon: '⚡',
-    color: '#39FF14',
+    color: '#FEA700',
     hp: '1,001', secs: '2.5s', top: '350',
     image: '/cars/yellow.png',
     desc: 'The future is electrified and deafening. Three electric motors amplify the screaming V12 for over 1,000 combined horsepower.',
@@ -20,7 +20,7 @@ const MODELS = [
     year: '2021 – PRESENT',
     tag: 'V10 RWD Track',
     icon: '🏁',
-    color: '#00FF88',
+    color: '#C10001',
     hp: '640', secs: '3.0s', top: '310',
     image: '/cars/red.png',
     desc: 'Super Trofeo Omologata — 200 race wins distilled into a road-legal weapon. 90% new bodywork, one purpose: pure speed.',
@@ -30,7 +30,7 @@ const MODELS = [
     year: '2022 – PRESENT',
     tag: 'Twin-Turbo V8 SUV',
     icon: '🏔️',
-    color: '#AAFF00',
+    color: '#DD3D0D',
     hp: '666', secs: '3.3s', top: '306',
     image: '/cars/orange.png',
     desc: "The world's first Super Sport Utility Vehicle. Redefines what four doors can do on any surface — tarmac, gravel, snow.",

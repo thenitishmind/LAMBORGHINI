@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 
-const ACCENT = '#00FF88'
+const ACCENT = '#C10001'
 
 const SPECS = [
   { label: 'Engine',         val: '6.5L V12 Naturally Aspirated' },

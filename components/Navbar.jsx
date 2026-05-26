@@ -33,7 +33,7 @@ export default function Navbar({ activeSection, theme }) {
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className="font-orbitron font-black text-xl tracking-[4px] transition-all duration-500 flex items-center gap-3"
         style={{
-          color: '#39FF14',
+          color: '#FEA700',
         }}
       >
         <img src="/logo.png" alt="Lamborghini" className="w-8 h-8 object-contain" />

@@ -291,7 +291,7 @@ function buildCircuitGrid(scene) {
   ctx.fillStyle = '#000000'
   ctx.fillRect(0, 0, size, size)
 
-  ctx.strokeStyle = '#00FF88'
+  ctx.strokeStyle = '#C10001'
   ctx.lineWidth = 1.2
 
   const step = 40
@@ -308,7 +308,7 @@ function buildCircuitGrid(scene) {
       if (Math.random() > 0.65) {
         ctx.beginPath()
         ctx.arc(x, y, Math.random() > 0.7 ? 4 : 2, 0, Math.PI * 2)
-        ctx.fillStyle = '#00FF88'; ctx.fill()
+        ctx.fillStyle = '#C10001'; ctx.fill()
       }
     }
   }

@@ -7,13 +7,13 @@ const VIEW_360_VIDEOS = [
     src: '/cars/360view.mp4',
     label: 'Exterior Beauty',
     desc: 'Experience the sculpted perfection of every angle',
-    color: '#39FF14',
+    color: '#FEA700',
   },
   {
     src: '/cars/360.mp4',
     label: 'Performance Essence',
     desc: 'Witness the engineering excellence from all sides',
-    color: '#00FF88',
+    color: '#C10001',
   },
 ]
 

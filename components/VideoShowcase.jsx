@@ -7,19 +7,19 @@ const VIDEOS = [
     src: '/cars/Cars1.mp4',
     title: 'Performance Unleashed',
     subtitle: 'Raw Power, Pure Speed',
-    accent: '#39FF14',
+    accent: '#FEA700',
   },
   {
     src: '/cars/car2.mp4',
     title: 'Dynamic Precision',
     subtitle: 'Engineering Perfection',
-    accent: '#00FF88',
+    accent: '#C10001',
   },
   {
     src: '/cars/black beauty.mp4',
     title: 'Black Beauty',
     subtitle: 'Elegance and Power',
-    accent: '#AAFF00',
+    accent: '#DD3D0D',
   },
 ]
 
@@ -147,7 +147,7 @@ export default function VideoShowcase() {
           <div className="text-center mb-16">
             <div
               className="font-orbitron text-[10px] tracking-[5px] uppercase mb-4 inline-block"
-              style={{ color: '#39FF14' }}
+              style={{ color: '#FEA700' }}
             >
               Premium Collection
             </div>
@@ -178,7 +178,7 @@ export default function VideoShowcase() {
             {/* Info */}
             <div className="flex flex-col gap-6">
               <div>
-                <h3 className="font-orbitron font-black text-4xl mb-3" style={{ color: '#39FF14' }}>
+                <h3 className="font-orbitron font-black text-4xl mb-3" style={{ color: '#FEA700' }}>
                   {CAR_GALLERY[activeGallery].title}
                 </h3>
                 <p className="font-rajdhani text-white/70 text-lg leading-relaxed mb-6">
@@ -190,7 +190,7 @@ export default function VideoShowcase() {
               <div className="grid grid-cols-3 gap-4">
                 {CAR_GALLERY[activeGallery].specs.map((spec, i) => (
                   <div key={i} className="border border-white/10 rounded p-4 text-center">
-                    <div className="font-orbitron font-bold text-lg" style={{ color: '#39FF14' }}>
+                    <div className="font-orbitron font-bold text-lg" style={{ color: '#FEA700' }}>
                       {spec.split(' ')[0]}
                     </div>
                     <div className="text-white/50 text-xs mt-1">{spec.split(' ').slice(1).join(' ')}</div>
@@ -206,9 +206,9 @@ export default function VideoShowcase() {
                     onClick={() => setActiveGallery(idx)}
                     className="flex-1 py-3 rounded transition-all duration-300 font-orbitron text-sm tracking-wider"
                     style={{
-                      background: activeGallery === idx ? '#39FF14' : 'rgba(57,255,20,0.1)',
-                      color: activeGallery === idx ? '#000' : '#39FF14',
-                      border: `1px solid ${activeGallery === idx ? '#39FF14' : 'rgba(57,255,20,0.3)'}`,
+                      background: activeGallery === idx ? '#FEA700' : 'rgba(254,167,0,0.1)',
+                      color: activeGallery === idx ? '#000' : '#FEA700',
+                      border: `1px solid ${activeGallery === idx ? '#FEA700' : 'rgba(254,167,0,0.3)'}`,
                     }}
                   >
                     {CAR_GALLERY[idx].title.split(' ')[0]}
