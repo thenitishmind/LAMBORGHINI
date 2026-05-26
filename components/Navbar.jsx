@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
-const LINKS = ['Models', 'Performance', 'Technology', 'Heritage', 'Contact']
+const LINKS = ['Performance', 'Configure', 'Models', 'Technology', 'Heritage', 'Contact']
 
 export default function Navbar({ activeSection, theme }) {
   const [scrolled, setScrolled] = useState(false)
@@ -60,6 +60,7 @@ export default function Navbar({ activeSection, theme }) {
       {/* Right Action Buttons */}
       <div className="hidden md:flex items-center gap-4">
         <button
+          onClick={() => scrollTo(1)}
           className="font-orbitron text-[10px] tracking-[2px] uppercase px-5 py-2.5 rounded-sm transition-all duration-500"
           style={{
             border: `1px solid ${theme.accent}`,

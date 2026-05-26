@@ -7,6 +7,7 @@ import View360 from '@/components/View360'
 import HeroSection from '@/components/sections/HeroSection'
 import View360Section from '@/components/sections/View360Section'
 import PerformanceSection from '@/components/sections/PerformanceSection'
+import ConfigureYoursSection from '@/components/sections/ConfigureYoursSection'
 import ModelsSection from '@/components/sections/ModelsSection'
 import TechSection from '@/components/sections/TechSection'
 import HeritageSection from '@/components/sections/HeritageSection'
@@ -14,12 +15,13 @@ import FooterSection from '@/components/sections/FooterSection'
 import VideoShowcase from '@/components/VideoShowcase'
 
 const SECTION_THEMES = [
-  { accent: '#FEA700', label: '01 / BORN TO DRIFT',    bg: 'bg-hero'    },
-  { accent: '#C10001', label: '02 / PERFORMANCE DNA',  bg: 'bg-perf'    },
-  { accent: '#DD3D0D', label: '03 / THE LINEUP',       bg: 'bg-models'  },
-  { accent: '#FEA700', label: '04 / INNOVATION',       bg: 'bg-tech'    },
-  { accent: '#C10001', label: '05 / RACING HERITAGE',  bg: 'bg-heritage'},
-  { accent: '#DD3D0D', label: '06 / CONTACT',          bg: 'bg-footer'  },
+  { accent: '#FEA700', label: '01 / BORN TO DRIFT',      bg: 'bg-hero'      },
+  { accent: '#C10001', label: '02 / PERFORMANCE DNA',    bg: 'bg-perf'      },
+  { accent: '#DD3D0D', label: '03 / CONFIGURE YOURS',    bg: 'bg-configure' },
+  { accent: '#DD3D0D', label: '04 / THE LINEUP',         bg: 'bg-models'    },
+  { accent: '#FEA700', label: '05 / INNOVATION',         bg: 'bg-tech'      },
+  { accent: '#C10001', label: '06 / RACING HERITAGE',    bg: 'bg-heritage'  },
+  { accent: '#DD3D0D', label: '07 / CONTACT',            bg: 'bg-footer'    },
 ]
 
 export default function Home() {
@@ -31,7 +33,7 @@ export default function Home() {
       const total = document.documentElement.scrollHeight - window.innerHeight
       const prog = Math.min(window.scrollY / total, 1)
       setScrollProgress(prog)
-      const idx = Math.min(Math.floor(prog * 6), 5)
+      const idx = Math.min(Math.floor(prog * 7), 6)
       setActiveSection(idx)
     }
     window.addEventListener('scroll', onScroll, { passive: true })
@@ -61,7 +63,7 @@ export default function Home() {
             key={i}
             onClick={() => {
               const total = document.documentElement.scrollHeight - window.innerHeight
-              window.scrollTo({ top: (i / 5) * total, behavior: 'smooth' })
+              window.scrollTo({ top: (i / 6) * total, behavior: 'smooth' })
             }}
             className="w-2 h-2 rounded-full transition-all duration-500 cursor-pointer"
             style={{
@@ -95,10 +97,11 @@ export default function Home() {
         <View360Section />
         <VideoShowcase />
         <PerformanceSection active={activeSection === 1} />
-        <ModelsSection active={activeSection === 2} />
-        <TechSection active={activeSection === 3} />
-        <HeritageSection active={activeSection === 4} />
-        <FooterSection active={activeSection === 5} />
+        <ConfigureYoursSection active={activeSection === 2} />
+        <ModelsSection active={activeSection === 3} />
+        <TechSection active={activeSection === 4} />
+        <HeritageSection active={activeSection === 5} />
+        <FooterSection active={activeSection === 6} />
       </div>
 
       <Navbar activeSection={activeSection} theme={theme} />
