@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from 'react'
 
 const VIEW_360_VIDEOS = [
   {
-    src: '/cars/360view.mp4',
+    src: '/cars/video.mp4',
     label: 'Exterior Beauty',
     desc: 'Experience the sculpted perfection of every angle',
     color: '#FEA700',
