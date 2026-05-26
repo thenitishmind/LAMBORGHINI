@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 
-const ACCENT = '#FF8C00'
+const ACCENT = '#39FF14'
 
 const COLS = [
   {
@@ -80,7 +80,7 @@ export default function FooterSection({ active }) {
             <button
               className="font-orbitron text-xs tracking-[3px] uppercase px-10 py-4 font-bold transition-all duration-300 hover:-translate-y-1 hover:scale-105"
               style={{
-                background: `linear-gradient(135deg, ${ACCENT}, #FFD700)`,
+                background: `linear-gradient(135deg, ${ACCENT}, #AAFF00)`,
                 color: '#000',
                 boxShadow: `0 0 50px ${ACCENT}55`,
               }}
@@ -108,7 +108,7 @@ export default function FooterSection({ active }) {
               <div
                 className="font-orbitron font-black text-xl tracking-[3px] mb-4"
                 style={{
-                  background: `linear-gradient(90deg, ${ACCENT}, #FFD700)`,
+                  background: `linear-gradient(90deg, ${ACCENT}, #AAFF00)`,
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                 }}

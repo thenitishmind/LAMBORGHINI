@@ -14,12 +14,12 @@ import FooterSection from '@/components/sections/FooterSection'
 import VideoShowcase from '@/components/VideoShowcase'
 
 const SECTION_THEMES = [
-  { accent: '#FFD700', label: '01 / BORN TO DRIFT',    bg: 'bg-hero'    },
-  { accent: '#00D9FF', label: '02 / PERFORMANCE DNA',  bg: 'bg-perf'    },
-  { accent: '#FF006E', label: '03 / THE LINEUP',       bg: 'bg-models'  },
-  { accent: '#B537F2', label: '04 / INNOVATION',       bg: 'bg-tech'    },
-  { accent: '#39FF14', label: '05 / RACING HERITAGE',  bg: 'bg-heritage'},
-  { accent: '#FF6B35', label: '06 / CONTACT',          bg: 'bg-footer'  },
+  { accent: '#39FF14', label: '01 / BORN TO DRIFT',    bg: 'bg-hero'    },
+  { accent: '#00FF88', label: '02 / PERFORMANCE DNA',  bg: 'bg-perf'    },
+  { accent: '#AAFF00', label: '03 / THE LINEUP',       bg: 'bg-models'  },
+  { accent: '#39FF14', label: '04 / INNOVATION',       bg: 'bg-tech'    },
+  { accent: '#00FF88', label: '05 / RACING HERITAGE',  bg: 'bg-heritage'},
+  { accent: '#AAFF00', label: '06 / CONTACT',          bg: 'bg-footer'  },
 ]
 
 export default function Home() {

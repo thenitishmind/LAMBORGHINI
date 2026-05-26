@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 
-const ACCENT = '#00D9FF'
+const ACCENT = '#00FF88'
 
 const SPECS = [
   { label: 'Engine',         val: '6.5L V12 Naturally Aspirated' },
@@ -75,8 +75,8 @@ export default function PerformanceSection({ active }) {
             className="font-orbitron font-black leading-[0.9] mb-8"
             style={{ fontSize: 'clamp(38px, 5vw, 72px)' }}
           >
-            <span className="gradient-red block">ENGINEERED FOR</span>
-            <span className="gradient-red block">EXTREMES</span>
+            <span className="gradient-green block">ENGINEERED FOR</span>
+            <span className="gradient-green block">EXTREMES</span>
           </h2>
 
           <p className="font-rajdhani text-white/50 text-lg leading-relaxed max-w-md mb-10">

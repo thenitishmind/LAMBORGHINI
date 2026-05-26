@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 
-const ACCENT = '#FF006E'
+const ACCENT = '#AAFF00'
 
 const MODELS = [
   {
@@ -10,7 +10,7 @@ const MODELS = [
     year: '2023 – PRESENT',
     tag: 'V12 Hybrid',
     icon: '⚡',
-    color: '#FFD700',
+    color: '#39FF14',
     hp: '1,001', secs: '2.5s', top: '350',
     image: '/cars/yellow.png',
     desc: 'The future is electrified and deafening. Three electric motors amplify the screaming V12 for over 1,000 combined horsepower.',
@@ -20,7 +20,7 @@ const MODELS = [
     year: '2021 – PRESENT',
     tag: 'V10 RWD Track',
     icon: '🏁',
-    color: '#FF006E',
+    color: '#00FF88',
     hp: '640', secs: '3.0s', top: '310',
     image: '/cars/red.png',
     desc: 'Super Trofeo Omologata — 200 race wins distilled into a road-legal weapon. 90% new bodywork, one purpose: pure speed.',
@@ -30,7 +30,7 @@ const MODELS = [
     year: '2022 – PRESENT',
     tag: 'Twin-Turbo V8 SUV',
     icon: '🏔️',
-    color: '#00D9FF',
+    color: '#AAFF00',
     hp: '666', secs: '3.3s', top: '306',
     image: '/cars/orange.png',
     desc: "The world's first Super Sport Utility Vehicle. Redefines what four doors can do on any surface — tarmac, gravel, snow.",
@@ -66,8 +66,8 @@ export default function ModelsSection({ active }) {
             className="font-orbitron font-black leading-[0.9]"
             style={{ fontSize: 'clamp(38px, 5vw, 72px)' }}
           >
-            <span className="gradient-blue block">CHOOSE YOUR</span>
-            <span className="gradient-blue block">WEAPON</span>
+            <span className="gradient-green block">CHOOSE YOUR</span>
+            <span className="gradient-green block">WEAPON</span>
           </h2>
           <p className="font-rajdhani text-white/40 text-lg mt-4 max-w-xl mx-auto">
             Three distinct visions of automotive supremacy — each a masterpiece of Italian excess.
